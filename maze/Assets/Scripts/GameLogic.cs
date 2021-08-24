@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
+
+    [SerializeField] GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +19,7 @@ public class Controller : MonoBehaviour
         
     }
 
-    void FixedUpdate() {
-        float pitch = Input.GetAxis("Vertical");
-        float roll = Input.GetAxis("Horizontal");
-        this.transform.Rotate(roll/5, 0, pitch/5, Space.World);
+    public GameObject GetActivePlayer() {
+        return player;
     }
 }
