@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    Vector3 rotationVector;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,8 @@ public class Controller : MonoBehaviour
     {
         float pitch = -1 * Input.GetAxis("Vertical");
         float roll = -1 * Input.GetAxis("Horizontal");
-        this.transform.Rotate(pitch, 0, roll, Space.Self);
+        rotationVector = new Vector3(pitch,0f,roll);
+        this.transform.RotateAround(transform.parent.position, rotationVector,0.1f);
     
     }
 }
