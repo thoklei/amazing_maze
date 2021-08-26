@@ -18,17 +18,26 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate() {
     
-        ControlRotation();
+        RotateQ();
 
     }
 
-    void ControlRotation() {
+    // void ControlRotation() {
+    //     float roll = Input.GetAxis("Roll");
+    //     float pitch = Input.GetAxis("Pitch");
+    //     float yaw = Input.GetAxis("Yaw"); 
+
+    //     float damp = 0.3f; // dampening factor to slow down movement enough to maintain proper collisions
+
+    //     this.transform.Rotate(pitch*damp, yaw*damp, roll*damp, Space.World);
+    // }
+
+    void RotateQ() {
         float roll = Input.GetAxis("Roll");
         float pitch = Input.GetAxis("Pitch");
         float yaw = Input.GetAxis("Yaw"); 
 
-        float damp = 0.3f; // dampening factor to slow down movement enough to maintain proper collisions
-
-        this.transform.Rotate(pitch*damp, yaw*damp, roll*damp, Space.World);
+        Rigidbody rb = this.GetComponentInChildren<Rigidbody>();
+        rb.AddTorque(pitch, roll, yaw, ForceMode.Acceleration);
     }
 }
