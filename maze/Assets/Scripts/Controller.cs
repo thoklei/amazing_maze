@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -18,26 +20,17 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate() {
     
-        RotateQ();
+        Rotate();
 
     }
 
-    // void ControlRotation() {
-    //     float roll = Input.GetAxis("Roll");
-    //     float pitch = Input.GetAxis("Pitch");
-    //     float yaw = Input.GetAxis("Yaw"); 
-
-    //     float damp = 0.3f; // dampening factor to slow down movement enough to maintain proper collisions
-
-    //     this.transform.Rotate(pitch*damp, yaw*damp, roll*damp, Space.World);
-    // }
-
-    void RotateQ() {
+    void Rotate() {
         float roll = Input.GetAxis("Roll");
         float pitch = Input.GetAxis("Pitch");
         float yaw = Input.GetAxis("Yaw"); 
 
-        Rigidbody rb = this.GetComponentInChildren<Rigidbody>();
-        rb.AddTorque(pitch, roll, yaw, ForceMode.Acceleration);
+        float factor = 2;
+
+        rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
     }
 }
