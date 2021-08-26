@@ -46,13 +46,4 @@ public class SeeThrough : MonoBehaviour
         this.ready = true;
     }
 
-    void SetVisible() {
-        rend.enabled = true;
-
-    }
-
-    void SetVisibility(bool visible) {
-        rend.enabled = visible;
-    }
-
 }
