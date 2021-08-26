@@ -29,6 +29,6 @@ public class Controller : MonoBehaviour
 
         float damp = 0.3f; // dampening factor to slow down movement enough to maintain proper collisions
 
-        this.transform.Rotate(roll*damp, yaw*damp, pitch*damp, Space.World);
+        this.transform.Rotate(pitch*damp, yaw*damp, roll*damp, Space.World);
     }
 }
