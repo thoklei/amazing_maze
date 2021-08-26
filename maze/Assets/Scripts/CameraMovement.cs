@@ -20,6 +20,5 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         this.transform.position = player.transform.position + diffVec;
-        
     }
 }
