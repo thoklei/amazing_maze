@@ -15,7 +15,7 @@ public class SeeThroughChildren : MonoBehaviour
     void Start()
     {
         renderers = new List<Renderer>();
-        renderers.AddRange(this.GetComponentsInChildren<Renderer>());
+        UpdateRenderers();
     }
 
     // if this thing is hit by raycast, disable all children
@@ -37,6 +37,7 @@ public class SeeThroughChildren : MonoBehaviour
                     foreach(Renderer rend in this.renderers) {
                         SetVisible(rend);
                     } 
+                    ready = false;
                 }
             }
         }
@@ -55,5 +56,17 @@ public class SeeThroughChildren : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         ready = true;
+    }
+
+    public void UpdateRenderers() {
+        Debug.Log("Updating renderer list, size: " + renderers.Count);
+        renderers.Clear();
+        foreach(Renderer rend in this.GetComponentsInChildren<Renderer>()) {
+            if(rend != null) {
+                renderers.Add(rend);
+            }
+        }
+        Debug.Log("Updated renderer list, size: " + renderers.Count);
+
     }
 }
