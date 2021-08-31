@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
         float pitch = Input.GetAxis("Pitch");
         float yaw = Input.GetAxis("Yaw"); 
 
-        float factor = 2;
+        float factor = 5;
 
         rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
     }
