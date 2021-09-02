@@ -23,6 +23,7 @@ public class Coin : MonoBehaviour
     }
 
     void OnDestroy() {
-        this.GetComponentInParent<SeeThroughChildren>().UpdateRenderers();
+        SeeThroughChildren stc = this.GetComponentInParent<SeeThroughChildren>();
+        if(stc != null) stc.UpdateRenderers();
     }
 }
