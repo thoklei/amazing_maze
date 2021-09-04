@@ -31,6 +31,6 @@ public class Controller : MonoBehaviour
 
         float factor = 2;
 
-        rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Force);
+        rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
     }
 }
