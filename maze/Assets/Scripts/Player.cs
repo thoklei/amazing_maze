@@ -23,8 +23,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void KillPlayer()
-    {
+    public void KillPlayer(){
         dead = true;
+    }
+    public void ChangeRespawnPoint(Transform NewPoint){
+        this.respawnPoint = NewPoint.transform;
     }
 }

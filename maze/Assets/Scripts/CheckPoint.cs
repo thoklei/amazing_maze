@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Killer : MonoBehaviour
+public class CheckPoint : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,14 +13,12 @@ public class Killer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other){
         if (other.tag == "Player"){
-            print("Sphere hit barrier!");
-            other.GetComponent<Player>().KillPlayer();
+            other.GetComponent<Player>().ChangeRespawnPoint(this.transform);
         }
     }
 }
