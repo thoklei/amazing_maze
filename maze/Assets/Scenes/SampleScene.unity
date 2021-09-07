@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,11 +245,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 117600312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86c60427aeb47943a9c63b5dd37cea8, type: 3}
+  m_Script: {fileID: 11500000, guid: c6df412b5960c4e4783dc5ec804816c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 562398836}
-  respawnPoint: {fileID: 938346280}
 --- !u!1 &195655039
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +783,7 @@ GameObject:
   - component: {fileID: 562398834}
   - component: {fileID: 562398833}
   - component: {fileID: 562398837}
+  - component: {fileID: 562398838}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -884,6 +883,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &562398838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562398832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9d070b2525647fb996fbcd0130c935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 938346280}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,11 +1161,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 860307848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86c60427aeb47943a9c63b5dd37cea8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 562398836}
-  respawnPoint: {fileID: 938346280}
 --- !u!54 &860307850
 Rigidbody:
   m_ObjectHideFlags: 0
