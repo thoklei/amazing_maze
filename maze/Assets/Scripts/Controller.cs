@@ -41,4 +41,6 @@ public class Controller : MonoBehaviour
         playerRB.AddForce(playerVec, ForceMode.Force);
         // Debug.DrawLine(playerRB.transform.position, playerRB.transform.position + playerVec, Color.green, 2, false);
     }
+    
+
 }
