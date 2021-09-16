@@ -37,7 +37,8 @@ public class Audiomanager : MonoBehaviour
 		}
 	}
 
-	// todo replace strings with enum values
+	
+	// play sound
 	public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
@@ -53,7 +54,8 @@ public class Audiomanager : MonoBehaviour
 		Debug.Log("s: " + s.source.volume);
 		s.source.Play();
 	}
-	public void Play(string sound, float seconds)
+	// play sound at volume x
+	public void Play(string sound, float volume)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)
@@ -62,13 +64,11 @@ public class Audiomanager : MonoBehaviour
 			return;
 		}
 
-		// s.source.volume = s.volume; //* (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-		// s.source.pitch = s.pitch; //* (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-
-		Debug.Log("s: " + s.source.volume);
-		s.source.PlayDelayed(seconds);
+		s.source.volume = volume;
+		s.source.Play();
+		
 	}
-	
+
 	public void Stop(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
