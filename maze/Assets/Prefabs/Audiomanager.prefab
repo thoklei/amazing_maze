@@ -40,12 +40,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8818951056804958043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f4d902ef9273480fb19fdc30a5dafd0, type: 3}
+  m_Script: {fileID: 11500000, guid: fafba41fc4ed84dbf968bffff66df166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
+  - name: coin
+    clip: {fileID: 8300000, guid: f0d949a0e66de49259fa4bd9dcdf27bc, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: wallhit
+    clip: {fileID: 8300000, guid: 955eeaa42877347c78f7a03d0e711952, type: 3}
     volume: 0
     volumeVariance: 0
     pitch: 0
