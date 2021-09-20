@@ -18,6 +18,7 @@ public class Coin : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.tag.Equals("Player")) {
+            Audiomanager.instance.Play("coin");
             Destroy(this.gameObject);
         }
     }
