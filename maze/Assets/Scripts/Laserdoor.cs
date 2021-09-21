@@ -41,11 +41,11 @@ public class Laserdoor : MonoBehaviour
     
     IEnumerator DelayAction(float delay)
     {
-        //Wait for the specified delay time before continuing.
+        //Wait for x seconds, then turnoff
         yield return new WaitForSeconds(delay);
         Turnoff();
 
-        //Do the action after the delay time has finished.
+        
     }
     
 }
