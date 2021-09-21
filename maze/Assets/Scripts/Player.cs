@@ -6,8 +6,10 @@ public class Player : MonoBehaviour
 {
 
     public int coinCounter;
-    
-    // Start is called before the first frame update
+    [SerializeField] private Transform respawnPoint;
+    private bool dead = false;
+
+
     void Start()
     {
         coinCounter = 0;
@@ -16,6 +18,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Check if dead and ifso transform player to respawnpoint
+       if(dead)
+        {
+            this.transform.position = respawnPoint.transform.position;
+            dead = false;
+        }
+    }
+
+    public void KillPlayer(){
+        dead = true;
+    }
+    public void ChangeRespawnPoint(Transform NewPoint){
+        this.respawnPoint = NewPoint.transform;
     }
 
     void OnTriggerEnter(Collider other) {
