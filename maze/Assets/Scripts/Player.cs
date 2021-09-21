@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private int coinCounter;
+    public int coinCounter;
     
     // Start is called before the first frame update
     void Start()
@@ -36,4 +36,6 @@ public class Player : MonoBehaviour
             Audiomanager.instance.Play("wallhit",volume);
         }
     }
+
+
 }

@@ -15,7 +15,7 @@ public class OnOffButton : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            door.turnoff();
+            door.Turnoffinsec(1f);
             this.gameObject.SetActive(false);
             partner.gameObject.SetActive(true);
             Audiomanager.instance.Play("button");
