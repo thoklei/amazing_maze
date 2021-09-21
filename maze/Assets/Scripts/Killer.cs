@@ -19,7 +19,6 @@ public class Killer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player"){
-            print("Sphere hit barrier!");
             other.GetComponent<Player>().KillPlayer();
         }
     }

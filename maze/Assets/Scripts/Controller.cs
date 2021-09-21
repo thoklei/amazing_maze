@@ -38,8 +38,8 @@ public class Controller : MonoBehaviour
         rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
 
         // add extra force to player
-        Vector3 playerVec = new Vector3(-1 * roll, yaw, pitch) * 20;
-        playerRB.AddForce(playerVec, ForceMode.Force);
+        //Vector3 playerVec = new Vector3(-1 * roll, yaw, pitch) * 20;
+        //playerRB.AddForce(playerVec, ForceMode.Force);
         // Debug.DrawLine(playerRB.transform.position, playerRB.transform.position + playerVec, Color.green, 2, false);
     }
 
