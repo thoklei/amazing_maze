@@ -6,14 +6,14 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
 
-    private Rigidbody rb;
+    //private Rigidbody rb;
     // Start is called before the first frame update
 
-    [SerializeField] private Rigidbody playerRB;
+    //[SerializeField] private RigidIbody playerRB;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        //rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,9 +33,14 @@ public class Controller : MonoBehaviour
         float pitch = Input.GetAxis("Pitch"); // s w
         float yaw = Input.GetAxis("Yaw");  // q e
 
-        float factor = 2;
+        float factor = 0.001F;
 
-        rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
+        Vector3 rotation = new Vector3(roll *factor, yaw*factor, pitch*factor);
+        //transform.rotation = new Quaternion(roll*factor,0, pitch*factor,1) * transform.rotation;
+
+        transform.RotateAround(new Vector3(0, 0, 0), rotation, 1);
+
+        //rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
 
         // add extra force to player
         //Vector3 playerVec = new Vector3(-1 * roll, yaw, pitch) * 20;
@@ -43,5 +48,5 @@ public class Controller : MonoBehaviour
         // Debug.DrawLine(playerRB.transform.position, playerRB.transform.position + playerVec, Color.green, 2, false);
     }
 
-    
+
 }
