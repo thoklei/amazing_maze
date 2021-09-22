@@ -35,8 +35,8 @@ public class Controller : MonoBehaviour
 
         float factor = 0.001F;
 
-        Vector3 rotation = new Vector3(roll *factor, yaw*factor, pitch*factor);
-        //transform.rotation = new Quaternion(roll*factor,0, pitch*factor,1) * transform.rotation;
+        Vector3 rotation = new Vector3(pitch *factor, yaw*factor, roll*factor);
+        //transform.rotation = new Quaternion(pitch*factor,0, roll*factor,1) * transform.rotation;
 
         transform.RotateAround(new Vector3(0, 0, 0), rotation, 1);
 
