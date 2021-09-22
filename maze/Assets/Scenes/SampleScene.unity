@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8140579382031718181, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
 --- !u!1001 &17685957
@@ -324,6 +328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!114 &36469977 stripped
@@ -396,6 +404,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!114 &52478807 stripped
@@ -1215,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!1 &500430683
@@ -1469,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!114 &555303884 stripped
@@ -2442,6 +2462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!114 &793428453 stripped
@@ -3680,6 +3704,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc8c580e0da6f41328d1a157682ead5d, type: 3}
+--- !u!1 &1552244176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5341772851036505521, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
+  m_PrefabInstance: {fileID: 1498374282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552244181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552244176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonball: {fileID: 1849621741851615721, guid: fb907da08026149e393f6498ca998a88, type: 3}
 --- !u!1001 &1568089523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4779,6 +4821,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007061862172971524, guid: 97109504173e449a59069e7ddba565ea, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 562398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97109504173e449a59069e7ddba565ea, type: 3}
 --- !u!114 &2020530999 stripped
