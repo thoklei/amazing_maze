@@ -6,10 +6,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Transform respawnPoint;
     private bool dead = false;
+    private int coinCounter;
     // Start is called before the first frame update
     void Start()
     {
-        
+        coinCounter = 0;
     }
 
     // Update is called once per frame
@@ -28,5 +29,12 @@ public class Player : MonoBehaviour
     }
     public void ChangeRespawnPoint(Transform NewPoint){
         this.respawnPoint = NewPoint.transform;
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if(other.tag.Equals("Coin")) {
+            this.coinCounter++;
+            Debug.Log("Collected a coin!");
+        }
     }
 }
