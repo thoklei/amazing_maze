@@ -68,7 +68,7 @@ public class Ghost : MonoBehaviour
     {
         if(other.tag.Equals("Player"))
         {
-            Destroy(other);
+            ball.Damage(150);
         }
     }
 }

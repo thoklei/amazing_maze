@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
     private void Death() {
         Debug.Log("Wasted.");
         // entry point for end-game logic for Chris
+        Destroy(this.gameObject);
     }
 
 

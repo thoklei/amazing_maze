@@ -23,7 +23,7 @@ public class Laserdoor : MonoBehaviour
     {
         if(other.tag.Equals("Player")){
             Audiomanager.instance.Play("zap");
-            Destroy(other.gameObject);
+            ball.Damage(150);
         }
     }
 
