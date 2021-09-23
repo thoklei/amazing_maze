@@ -5,9 +5,13 @@ using UnityEngine;
 public class Cannon : MonoBehaviour
 {
 
-    [SerializeField] GameObject cannonball;
+    [SerializeField] Cannonball cannonball;
+    [SerializeField] GameObject endpoint;
 
-    int waitTime = 5; // seconds in between shots
+    [SerializeField] float waitTime = 5.0f; // seconds in between shots
+
+    [SerializeField] float speed = 0.01f;
+    [SerializeField] int damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +38,9 @@ public class Cannon : MonoBehaviour
 
     void SpawnBall() {
         Debug.Log("Spawning Cannon Ball!");
-        GameObject cb = Instantiate(cannonball, this.transform.position, Quaternion.identity);
-        //cb.transform.SetParent(this.transform.parent.parent);
+        Cannonball cb = Instantiate<Cannonball>(cannonball, this.transform.position, Quaternion.identity);
+        cb.transform.SetParent(this.transform.parent.parent);
+        cb.SetProperties(speed, damage);
+        cb.SetPoints(this.gameObject, this.endpoint);
     }
 }

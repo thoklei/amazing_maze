@@ -6,11 +6,14 @@ public class Player : MonoBehaviour
 {
 
     public int coinCounter;
+
+    public int health;
     
     // Start is called before the first frame update
     void Start()
     {
         coinCounter = 0;
+        health = 100;
     }
 
     // Update is called once per frame
@@ -22,7 +25,11 @@ public class Player : MonoBehaviour
         if(other.tag.Equals("Coin")) {
             this.coinCounter++;
             Debug.Log("Collected a coin!");
+        } else if(other.tag.Equals("cannonball")) {
+            Cannonball cb = other.gameObject.GetComponent<Cannonball>();
+            this.Damage(cb.damage);
         }
+
     }
     
     private void OnCollisionEnter(Collision other)
@@ -35,6 +42,18 @@ public class Player : MonoBehaviour
             Debug.Log(volume);
             Audiomanager.instance.Play("wallhit",volume);
         }
+    }
+
+    public void Damage(int damage) {
+        this.health -= damage;
+        if(this.health <= 0) {
+            Death();
+        }
+    }
+
+    private void Death() {
+        Debug.Log("Wasted.");
+        // entry point for end-game logic for Chris
     }
 
 
