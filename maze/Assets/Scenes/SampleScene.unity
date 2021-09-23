@@ -3064,6 +3064,10 @@ PrefabInstance:
       propertyPath: gameLogic
       value: 
       objectReference: {fileID: 963194229}
+    - target: {fileID: 6495392357750253969, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7875434684088352692, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
       propertyPath: m_Size.x
       value: 45.99118
