@@ -35,6 +35,6 @@ public class Cannon : MonoBehaviour
     void SpawnBall() {
         Debug.Log("Spawning Cannon Ball!");
         GameObject cb = Instantiate(cannonball, this.transform.position, Quaternion.identity);
-        cb.transform.SetParent(this.transform);
+        //cb.transform.SetParent(this.transform.parent.parent);
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6523866011561529551}
   m_Layer: 0
   m_Name: Cannonball
-  m_TagString: Untagged
+  m_TagString: cannonball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
