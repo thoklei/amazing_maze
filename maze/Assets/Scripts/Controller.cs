@@ -33,12 +33,13 @@ public class Controller : MonoBehaviour
         float pitch = Input.GetAxis("Pitch"); // s w
         float yaw = Input.GetAxis("Yaw");  // q e
 
-        float factor = 0.001F;
+        float factor = 1F;
+        Vector3 rotation = new Vector3(pitch *factor,0, roll*factor);
+        //float x = 
+        //Quaternion normalized = new Quaternion();
 
-        Vector3 rotation = new Vector3(pitch *factor, yaw*factor, roll*factor);
-        //transform.rotation = new Quaternion(pitch*factor,0, roll*factor,1) * transform.rotation;
-
-        transform.RotateAround(new Vector3(0, 0, 0), rotation, 1);
+        //transform.RotateAround(transform.localPosition, rotation, 1);
+        //transform.Rotate(pitch, 0, roll, Space.Self);
 
         //rb.AddTorque(factor*pitch, factor*yaw, factor*roll, ForceMode.Acceleration);
 
@@ -46,6 +47,19 @@ public class Controller : MonoBehaviour
         //Vector3 playerVec = new Vector3(-1 * roll, yaw, pitch) * 20;
         //playerRB.AddForce(playerVec, ForceMode.Force);
         // Debug.DrawLine(playerRB.transform.position, playerRB.transform.position + playerVec, Color.green, 2, false);
+
+        var angles = transform.eulerAngles;
+        float rotX = angles.x;
+        float rotY = angles.y;
+        float rotZ = angles.z;
+
+        Quaternion oldRotation = Quaternion.Euler(rotX, 0, rotZ);
+        Quaternion newRotation = Quaternion.Euler(pitch * factor, 0, roll * factor);
+        Quaternion combinedRotation = oldRotation * newRotation;
+
+        transform.rotation = Quaternion.RotateTowards(oldRotation, combinedRotation , 0.1f);
+        //transform.rotation = new Quaternion(x, 0, z, 1);
+
     }
 
 
