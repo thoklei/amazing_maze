@@ -1,24 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckPoint : MonoBehaviour
 {
+    [SerializeField] private Image checkpointUI;
+    public bool activated;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other){
-        if (other.tag == "Player"){
-            other.GetComponent<Player>().ChangeRespawnPoint(this.transform);
+        if (!activated)
+        {
+            if (other.CompareTag("Player")){
+                // other.GetComponent<Player>().ChangeRespawnPoint(this.transform);
+                activated = true;
+                // set UI to green background
+                checkpointUI.color = Color.green;
+            }
         }
     }
 }
