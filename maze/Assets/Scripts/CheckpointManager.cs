@@ -16,6 +16,7 @@ public class CheckpointManager : MonoBehaviour
             if (checkpoint.activated)
             {
                 _latestCheckpoint = checkpoint;
+                
             }
         }
     }
