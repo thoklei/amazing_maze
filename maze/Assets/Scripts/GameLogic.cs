@@ -6,6 +6,7 @@ public class GameLogic : MonoBehaviour
 {
 
     [SerializeField] GameObject player;
+    [SerializeField] public CheckpointManager checkpointManager;
 
     // Start is called before the first frame update
     void Start()
