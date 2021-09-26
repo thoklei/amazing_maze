@@ -4186,7 +4186,7 @@ GameObject:
   - component: {fileID: 4103726829106741201}
   - component: {fileID: 4207559667370271217}
   m_Layer: 3
-  m_Name: Checkpoint2
+  m_Name: Checkpoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4200,8 +4200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3353383911517787300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.12, y: 1, z: 21.64}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -16.495, y: 1, z: 24.3}
+  m_LocalScale: {x: 3, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 8580888548430498245}
   m_RootOrder: 118
@@ -5256,7 +5256,7 @@ GameObject:
   - component: {fileID: 3716837574331972591}
   - component: {fileID: 7740372893531430244}
   m_Layer: 3
-  m_Name: Checkpoint1
+  m_Name: MainCheckpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
