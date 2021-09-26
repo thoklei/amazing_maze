@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [SerializeField] private CheckpointManager checkpointManager;
     public int coinCounter;
 
     public int health;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         coinCounter = 0;
         health = 100;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     void OnTriggerEnter(Collider other) {
@@ -53,9 +48,8 @@ public class Player : MonoBehaviour
 
     private void Death() {
         Debug.Log("Wasted.");
-        // entry point for end-game logic for Chris
-        Destroy(this.gameObject);
+        Debug.Log("RESPAWN:" + checkpointManager.GetRespawnTransform());
+        this.transform.position = checkpointManager.GetRespawnTransform();
+        this.health = 100;
     }
-
-
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Ghost : MonoBehaviour
     public Transform[] waypoints;
     public int speed;
     [SerializeField] private Player ball;
+    [SerializeField] private GameLogic _gameLogic;
 
     private int waypointIdx;
     private float dist;
@@ -18,6 +20,16 @@ public class Ghost : MonoBehaviour
         waypointIdx = 0;
         chasing = false;
         transform.LookAt(waypoints[waypointIdx].position);
+    }
+
+    private void Update()
+    {
+        // TODO: change to event based system
+        // if the last checkpoint is reached return ghost to chasing behavior
+        // if (_gameLogic.checkpointManager.checkpoints[6].activated)
+        // {
+        //     chasing = false;
+        // }
     }
 
     // Update is called once per frame
