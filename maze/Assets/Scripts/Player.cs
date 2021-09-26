@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform respawnPoint;
-    private bool dead = false;
+    [SerializeField] private CheckpointManager checkpointManager;
     public int coinCounter;
 
     public int health;
@@ -15,25 +14,6 @@ public class Player : MonoBehaviour
     {
         coinCounter = 0;
         health = 100;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Check if dead and ifso transform player to respawnpoint
-       if(dead)
-        {
-            this.transform.position = respawnPoint.transform.position;
-            dead = false;
-        }
-    }
-
-    public void KillPlayer(){
-        dead = true;
-    }
-
-    public void ChangeRespawnPoint(Transform NewPoint){
-        this.respawnPoint = NewPoint.transform;
     }
 
     void OnTriggerEnter(Collider other) {
@@ -68,9 +48,8 @@ public class Player : MonoBehaviour
 
     private void Death() {
         Debug.Log("Wasted.");
-        // entry point for end-game logic for Chris
-        Destroy(this.gameObject);
+        Debug.Log("RESPAWN:" + checkpointManager.GetRespawnTransform());
+        this.transform.position = checkpointManager.GetRespawnTransform();
+        this.health = 100;
     }
-
-
 }
