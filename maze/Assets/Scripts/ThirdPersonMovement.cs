@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
-    public CharacterController controller;
     public Transform cam;
 
     public float speed = 2f;
