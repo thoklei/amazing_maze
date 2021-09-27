@@ -10,7 +10,7 @@ public class SizeUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.localScale = new Vector3(2f, 2f, 2f);
+            other.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
         }
     }
 }
