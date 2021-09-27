@@ -14,8 +14,5 @@ public class HealthBar : MonoBehaviour
         var currentHealth = player.health;
         var healthPercentage = currentHealth / 100f;
         healthBarImage.fillAmount = healthPercentage;
-
-        this.gameObject.transform.rotation = Quaternion.identity;
-
     }
 }
