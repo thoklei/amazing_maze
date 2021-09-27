@@ -9,11 +9,13 @@ public class Ghost : MonoBehaviour
     public int speed;
     [SerializeField] private Player ball;
     [SerializeField] private GameLogic _gameLogic;
+    [SerializeField] private Transform _ref; 
 
     private int waypointIdx;
     private float dist;
     public bool chasing;
-    
+    private Vector3 referenceVec;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,13 +53,15 @@ public class Ghost : MonoBehaviour
 
     void Patrol()
     {
-        transform.LookAt(waypoints[waypointIdx].position);
+        
+        transform.LookAt(waypoints[waypointIdx].position, _ref.position);
+
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
     
     public void Chase()
     {
-        transform.LookAt(ball.transform.position);
+        transform.LookAt(ball.transform.position, _ref.position);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
     
