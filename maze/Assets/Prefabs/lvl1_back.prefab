@@ -55,6 +55,7 @@ Transform:
   - {fileID: 1916241609974037600}
   - {fileID: 1957448490847535807}
   - {fileID: 4671681960117386133}
+  - {fileID: 4017970336874468963}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2050,6 +2051,65 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8314809541660798451, guid: 679a1defc561849d5b18b1d6846638ea, type: 3}
+--- !u!1 &7356320679046566700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4017970336874468963}
+  - component: {fileID: 3522056179412329609}
+  - component: {fileID: 8428027613191909465}
+  m_Layer: 3
+  m_Name: Checkpoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4017970336874468963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356320679046566700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.5, y: 40.3, z: 22.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 952221871933809978}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3522056179412329609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356320679046566700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.460925, z: 1}
+  m_Center: {x: 0, y: -0.2989955, z: 0}
+--- !u!114 &8428027613191909465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356320679046566700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  checkpointUI: {fileID: 0}
 --- !u!1 &8053414441884356134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,8 +2515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   checkpointUI: {fileID: 0}
-  activated: 0
 --- !u!1 &9170890415936349880
 GameObject:
   m_ObjectHideFlags: 0

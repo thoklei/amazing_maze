@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2194,7 +2194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562398832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -24.5, z: 0}
+  m_LocalPosition: {x: 15, y: 20.85, z: 24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2525,9 +2525,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 500430684}
     m_Modifications:
     - target: {fileID: 2943419939424426625, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1794341575}
+    - target: {fileID: 2943419939424426625, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
       propertyPath: checkpointUI
       value: 
       objectReference: {fileID: 806100810}
+    - target: {fileID: 2943419939424426625, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
+      propertyPath: behaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943419939424426625, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
+      propertyPath: behaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 2971143021783939263, guid: ceb52dda558cd42259aa8af518fa3de4, type: 3}
     - target: {fileID: 3180455791842158265, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
       propertyPath: m_Size.x
       value: 45.942398
@@ -2763,7 +2775,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -3103,7 +3115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792794103867498816, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3934073107272807969, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -3677,6 +3689,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 562398832}
+--- !u!114 &977152902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 967849748513820337, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+  m_PrefabInstance: {fileID: 1570580185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &987319001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4394,7 +4417,7 @@ PrefabInstance:
       objectReference: {fileID: 562398838}
     - target: {fileID: 8941992923698969876, guid: 95b8dfbb9196f4db69992c7a730fecb3, type: 3}
       propertyPath: coingoal
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95b8dfbb9196f4db69992c7a730fecb3, type: 3}
@@ -7356,7 +7379,7 @@ PrefabInstance:
     - target: {fileID: 4207559667370271217, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
       propertyPath: checkpointUI
       value: 
-      objectReference: {fileID: 806100810}
+      objectReference: {fileID: 977152902}
     - target: {fileID: 4222612821869298842, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
       propertyPath: m_TagString
       value: wall
