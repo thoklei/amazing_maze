@@ -11,9 +11,9 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         // Update value of Healthbar
-        // var currentHealth = player.GetHealth();
-        // var healthPercentage = currentHealth / 100f;
-        // healthBarImage.fillAmount = healthPercentage;
+        var currentHealth = player.health;
+        var healthPercentage = currentHealth / 100f;
+        healthBarImage.fillAmount = healthPercentage;
 
         this.gameObject.transform.rotation = Quaternion.identity;
 
