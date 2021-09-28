@@ -47,8 +47,6 @@ public class Player : MonoBehaviour
     }
 
     private void Death() {
-        Debug.Log("Wasted.");
-        Debug.Log("RESPAWN:" + checkpointManager.GetRespawnTransform());
         this.transform.position = checkpointManager.GetRespawnTransform();
         this.health = 100;
     }
