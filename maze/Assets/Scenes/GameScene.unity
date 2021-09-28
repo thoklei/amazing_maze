@@ -1285,6 +1285,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1150819429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8428027613191909465, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
+  m_PrefabInstance: {fileID: 1498374282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1193544016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 902663286480724041, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
@@ -1592,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8428027613191909465, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
+      propertyPath: checkpointUI
+      value: 
+      objectReference: {fileID: 806100810}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
 --- !u!4 &1498374283 stripped
@@ -1885,17 +1900,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1727316159573849198, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_PrefabInstance: {fileID: 1498374282}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1614921030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2943419939424426625, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
-  m_PrefabInstance: {fileID: 660119423}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1618475561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4147408744150415126, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
@@ -2034,7 +2038,7 @@ MonoBehaviour:
   checkpoints:
   - {fileID: 1847097804}
   - {fileID: 1145747018}
-  - {fileID: 1614921030}
+  - {fileID: 1150819429}
   - {fileID: 71374495}
   - {fileID: 655372005}
   - {fileID: 1949520716}
