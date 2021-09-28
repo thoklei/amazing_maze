@@ -14,6 +14,7 @@ public class Cannon : MonoBehaviour
     private Coroutine shooting;
 
     public void StartShooting() {
+        Debug.Log("Cannon started shooting");
         this.shooting = StartCoroutine(FirePeriodically());
     }
 
