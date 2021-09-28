@@ -16,6 +16,7 @@ public class CheckpointManager : MonoBehaviour
 
         // add behaviours to their respective checkpoints
         checkpoints[2].AddBehaviour(new CannonBehaviour());
+        checkpoints[4].AddBehaviour(new GhostBehaviour());
 
         _latestCheckpoint = checkpoints[0]; // init latest checkpoint
         Activate(_latestCheckpoint);

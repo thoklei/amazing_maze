@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: gameLogic
       value: 
       objectReference: {fileID: 963194229}
+    - target: {fileID: 3429150290059163772, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+      propertyPath: checkpointUI
+      value: 
+      objectReference: {fileID: 778222041}
     - target: {fileID: 3705249650354298251, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
       propertyPath: ghost
       value: 
@@ -449,6 +453,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1336146589276287814, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_PrefabInstance: {fileID: 1498374282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &419610829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 967849748513820337, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+  m_PrefabInstance: {fileID: 1570580185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &468780131 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5331164202253180612, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
@@ -639,17 +654,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c11451facc1f3b4582677a4bb33248e, type: 3}
---- !u!114 &655372005 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1518962134612025798, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
-  m_PrefabInstance: {fileID: 1977663792}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &657645100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 128114581372787728, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
@@ -2006,6 +2010,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9092804242209093886, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_PrefabInstance: {fileID: 1498374282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1786873895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3429150290059163772, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+  m_PrefabInstance: {fileID: 13498149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1794341574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2055,7 @@ MonoBehaviour:
   - {fileID: 1145747018}
   - {fileID: 1150819429}
   - {fileID: 71374495}
-  - {fileID: 655372005}
+  - {fileID: 1786873895}
   - {fileID: 1949520716}
   - {fileID: 1738901615}
 --- !u!4 &1794341576
@@ -2247,9 +2262,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 6086150894257492270, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7163411021905572119, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234246062339816616, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7776554303796061283, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
       propertyPath: ball
@@ -2263,6 +2286,14 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 1109604699}
+    - target: {fileID: 8264296872576825839, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
+      propertyPath: coingoal
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264296872576825839, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35de796648d374678a45cbcfff5ccf7a, type: 3}
 --- !u!4 &1977663793 stripped
@@ -2642,7 +2673,7 @@ PrefabInstance:
     - target: {fileID: 4207559667370271217, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
       propertyPath: checkpointUI
       value: 
-      objectReference: {fileID: 806100810}
+      objectReference: {fileID: 419610829}
     - target: {fileID: 4222612821869298842, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
       propertyPath: m_TagString
       value: wall

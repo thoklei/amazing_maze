@@ -59,14 +59,14 @@ public class SeeThroughChildren : MonoBehaviour
     }
 
     public void UpdateRenderers() {
-        Debug.Log("Updating renderer list, size: " + renderers.Count);
+        // Debug.Log("Updating renderer list, size: " + renderers.Count);
         renderers.Clear();
         foreach(Renderer rend in this.GetComponentsInChildren<Renderer>()) {
             if(rend != null) {
                 renderers.Add(rend);
             }
         }
-        Debug.Log("Updated renderer list, size: " + renderers.Count);
+        // Debug.Log("Updated renderer list, size: " + renderers.Count);
 
     }
 }
