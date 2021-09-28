@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,20 @@ public class ThirdPersonMovement : MonoBehaviour
 {
     public Transform cam;
 
-    public float speed = 2f;
+    public float force = 10f;
     public float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
+    private Rigidbody playerRB;
+    private Vector3 offset;
+
+    private void Start()
+    {
+        playerRB = this.GetComponent<Rigidbody>();
+        offset = new Vector3(0f, .5f, 0f);
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // get Input and calc movement direction 
         float horizontal = -Input.GetAxisRaw("Roll");
@@ -27,7 +36,10 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             
             // move in direction
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);        }
+            playerRB.AddForceAtPosition(new Vector3(cam.right.x, 0, cam.right.z).normalized * horizontal*force,this.transform.position + offset);
+            playerRB.AddForceAtPosition(new Vector3(cam.forward.x, 0, cam.forward.z).normalized * vertical*force, this.transform.position + offset);
+            
+           
+        }
     }
 }
