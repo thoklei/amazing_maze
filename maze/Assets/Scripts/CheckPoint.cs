@@ -12,10 +12,12 @@ public class CheckPoint : MonoBehaviour
 
     private List<CheckpointBehaviour> behaviours = new List<CheckpointBehaviour>();
     private bool activated;
+    private bool ready = true; // whether this cp can be activated by rolling into it
 
     private void OnTriggerEnter(Collider other)
     {
-        if( !activated && other.CompareTag("Player") ){
+        if( ready && !activated && other.CompareTag("Player") ){
+            ready = false;
             this.manager.Activate(this);
         }
     }

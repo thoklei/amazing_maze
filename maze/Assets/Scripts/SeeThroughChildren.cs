@@ -21,23 +21,28 @@ public class SeeThroughChildren : MonoBehaviour
     // if this thing is hit by raycast, disable all children
     void Update()
     {
-        RaycastHit hitInfo;
-        Vector3 dir = gameLogic.GetActivePlayer().transform.position - Camera.main.transform.position;
-        bool hit = Physics.Raycast(Camera.main.transform.position, dir, out hitInfo, dir.magnitude);
-        
-        if(hit) {
-            GameObject wall = hitInfo.collider.gameObject;
-            if( wall == baseplate) {
-                foreach(Renderer rend in this.renderers) {
-                    SetInvisible(rend);
-                }
-                StartCoroutine(FadeBackIn());
-            }else {
-                if(ready) {
+        float offsetDist = 10.0f;
+        Vector3[] offsets = {offsetDist * Vector3.forward, offsetDist * Vector3.back, offsetDist * Vector3.left, offsetDist * Vector3.right};
+        foreach(Vector3 offset in offsets) {
+
+            RaycastHit hitInfo;
+            Vector3 dir = gameLogic.GetActivePlayer().transform.position - ( Camera.main.transform.position + offset );
+            bool hit = Physics.Raycast(Camera.main.transform.position + offset, dir, out hitInfo, dir.magnitude);
+            
+            if(hit) {
+                GameObject wall = hitInfo.collider.gameObject;
+                if( wall == baseplate) {
                     foreach(Renderer rend in this.renderers) {
-                        SetVisible(rend);
-                    } 
-                    ready = false;
+                        SetInvisible(rend);
+                    }
+                    StartCoroutine(FadeBackIn());
+                }else {
+                    if(ready) {
+                        foreach(Renderer rend in this.renderers) {
+                            SetVisible(rend);
+                        } 
+                        ready = false;
+                    }
                 }
             }
         }

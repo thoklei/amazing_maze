@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: coin
     clip: {fileID: 8300000, guid: f0d949a0e66de49259fa4bd9dcdf27bc, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ghost
     clip: {fileID: 8300000, guid: 8cca1e5b34df64f13a4d6e63d084215b, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: wallhit
     clip: {fileID: 8300000, guid: 955eeaa42877347c78f7a03d0e711952, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: shutdown
     clip: {fileID: 8300000, guid: be9fd2a742c1244538ce2b44e1c7358a, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: zap
     clip: {fileID: 8300000, guid: 00b8e06ed42ce4b13acf7248af1d4088, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song0
     clip: {fileID: 8300000, guid: 42d36cd84d6454090b09291adb8c1ea4, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song1
     clip: {fileID: 8300000, guid: 0f1bb69c99286458f9f22c8eee039c6b, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song2
     clip: {fileID: 8300000, guid: 3cb9b353f91334c9386e4ef064351e03, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song3
     clip: {fileID: 8300000, guid: 3ba251d59280f49c48057df2c0107558, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song4
     clip: {fileID: 8300000, guid: b5daa4451750347028c12ba87d4937cf, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: song5
     clip: {fileID: 8300000, guid: 7de3a3c83df9b4f90a162a25e803109a, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: victory
     clip: {fileID: 8300000, guid: a98084ccd85084fa3840555b89357ac4, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: mainmenu
     clip: {fileID: 8300000, guid: bf60f003beb334077865dbde9d903415, type: 3}
-    volume: 0
+    volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
