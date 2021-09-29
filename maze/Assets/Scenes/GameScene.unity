@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1109604699}
   checkpointManager: {fileID: 1794341575}
-  _pauseMenu: {fileID: 1793089058}
+  pauseMenu: {fileID: 1793089058}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
