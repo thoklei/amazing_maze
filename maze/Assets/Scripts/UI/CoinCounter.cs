@@ -6,18 +6,10 @@ public class CoinCounter : MonoBehaviour
 {
     [SerializeField] Player player;
 
-    //List<int> neededCoins = new List<int> { 20, 0, 5, 10, 15, 0 };
-    //int neededCoin = checkpointManager.GetComponent<CheckpointManager>
-
     private int _neededCoins;
     private int _collectedCoins = 0;
     private int _playerCoins;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
