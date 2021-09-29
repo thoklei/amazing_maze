@@ -5,8 +5,8 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     void Start()
-    {
-        
+    { 
+        Audiomanager.instance.Play("mainmenu",.5f);
     }
     
     public void QuitGame()

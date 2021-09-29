@@ -8,6 +8,7 @@ public class CheckPoint : MonoBehaviour
 
     public CheckpointManager manager;
     [SerializeField] private Image checkpointUI;
+    
 
     private List<CheckpointBehaviour> behaviours = new List<CheckpointBehaviour>();
     private bool activated;
