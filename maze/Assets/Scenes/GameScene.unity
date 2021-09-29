@@ -738,6 +738,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3813153630188720013, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4605042324993521408, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
       propertyPath: m_Name
       value: lvl1_left
@@ -1111,6 +1115,58 @@ PrefabInstance:
     - target: {fileID: 953416766623773959, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344350121806168777, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
+      propertyPath: sounds.Array.data[12].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8818951056804958043, guid: 12771effd78804613a2ca657fb2465e7, type: 3}
       propertyPath: m_Name
@@ -2448,6 +2504,24 @@ Transform:
   m_Father: {fileID: 1266110009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2029013645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1466205017214347899, guid: be79f7bb5b5e14cf28b91cbaa52ab1ce, type: 3}
+  m_PrefabInstance: {fileID: 660119423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2029013650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029013645}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010077247, y: 0.019999955, z: 0.5199941}
+  m_Center: {x: 0.18503864, y: 0.014999972, z: -8.06008}
 --- !u!1001 &2032595416
 PrefabInstance:
   m_ObjectHideFlags: 0
