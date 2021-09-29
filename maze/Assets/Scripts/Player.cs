@@ -42,6 +42,12 @@ public class Player : MonoBehaviour
         if(this.health <= 0) {
             Death();
         }
+
+        if (this.health >= 0)
+        {
+            int i = UnityEngine.Random.Range(1, 4);
+            Audiomanager.instance.Play("ouch"+i);
+        }
     }
 
     private void Death() {
