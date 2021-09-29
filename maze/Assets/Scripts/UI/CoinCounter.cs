@@ -10,6 +10,8 @@ public class CoinCounter : MonoBehaviour
     //int neededCoin = checkpointManager.GetComponent<CheckpointManager>
 
     private int _neededCoins;
+    private int _colectedCoins = 0;
+    private int _playerCoins;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,8 @@ public class CoinCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int coins = player.coinCounter;
+        _playerCoins = player.coinCounter;
+        int coins = _playerCoins - _colectedCoins;
         GetComponent<TMPro.TextMeshProUGUI>().text = coins.ToString() + "/" +  _neededCoins;
     }
 
@@ -31,6 +34,7 @@ public class CoinCounter : MonoBehaviour
 
     public void ResetCoinCounter()
     {
+        //_colectedCoins += _playerCoins;
         player.ResetCoinCounter();
     }
 }
