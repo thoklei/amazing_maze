@@ -14,7 +14,7 @@ public class EndGameMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        // AudioManager.instance.Stop("victory");
+        Audiomanager.instance.Stop("victory");
         SceneManager.LoadScene("MainMenu");
     }
 }
