@@ -48,4 +48,10 @@ public class Player : MonoBehaviour
         this.transform.position = checkpointManager.GetRespawnTransform();
         this.health = 100;
     }
+
+    public void ResetCoinCounter()
+    {
+        coinCounter = 0;
+    }
 }
+

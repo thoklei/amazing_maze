@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CoinCounter : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] Player player;
+
+    //List<int> neededCoins = new List<int> { 20, 0, 5, 10, 15, 0 };
+    //int neededCoin = checkpointManager.GetComponent<CheckpointManager>
+
+    private int _neededCoins;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +20,17 @@ public class CoinCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int coins = player.GetComponent<Player>().coinCounter;
-        int neededCoin = 0;
-        GetComponent<TMPro.TextMeshProUGUI>().text = coins.ToString() + "/" +  neededCoin;
+        int coins = player.coinCounter;
+        GetComponent<TMPro.TextMeshProUGUI>().text = coins.ToString() + "/" +  _neededCoins;
+    }
+
+    public void SetNeededCoins(int neededCoins)
+    {
+        _neededCoins = neededCoins;
+    }
+
+    public void ResetCoinCounter()
+    {
+        player.ResetCoinCounter();
     }
 }
