@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 1109604699}
+    - target: {fileID: 1980462527285843339, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+      propertyPath: coingoal
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2209056112627406804, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
       propertyPath: m_ConnectedBody
       value: 
@@ -1651,6 +1655,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 1109604699}
+    - target: {fileID: 907473322402904664, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
+      propertyPath: coingoal
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 952221871933809978, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1881,6 +1889,22 @@ PrefabInstance:
     - target: {fileID: 1485878136036641524, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485878136734890906, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485878136734890906, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485878136734890906, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485878136734890906, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 6480026701243963132, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
       propertyPath: player
@@ -2172,6 +2196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549e77d7b7c0c4198a56a97a258a0456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinCounter: {fileID: 1875594152}
   checkpoints:
   - {fileID: 1847097804}
   - {fileID: 1145747018}
@@ -2205,6 +2230,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7771e48983e385f3996057d5ede66749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1875594148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1485878136734890904, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
+  m_PrefabInstance: {fileID: 1570580185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1875594152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875594148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26009b0643921ea49ad12cab7e48ecd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1109604699}
 --- !u!114 &1949520716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 975449711449030410, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
@@ -2910,6 +2953,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 1109604699}
+    - target: {fileID: 6046591793549311395, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
+      propertyPath: coingoal
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6130876932903799976, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
       propertyPath: m_TagString
       value: wall
