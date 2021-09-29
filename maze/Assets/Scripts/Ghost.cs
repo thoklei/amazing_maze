@@ -24,14 +24,16 @@ public class Ghost : MonoBehaviour
         transform.LookAt(waypoints[waypointIdx].position);
     }
 
-    private void Update()
-    {
-        // TODO: change to event based system
-        // if the last checkpoint is reached return ghost to chasing behavior
-        // if (_gameLogic.checkpointManager.checkpoints[6].activated)
-        // {
-        //     chasing = false;
-        // }
+    public void StartChasing() {
+        chasing = true;
+    }
+
+    public void StopChasing() {
+        chasing = false;
+    }
+    
+
+    private void Update() {
     }
 
     // Update is called once per frame

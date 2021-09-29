@@ -54,7 +54,7 @@ public class Audiomanager : MonoBehaviour
 		Debug.Log("s: " + s.source.volume);
 		s.source.Play();
 	}
-	// play sound at volume x
+	// play sound at volume x (between 0 and 1)
 	public void Play(string sound, float volume)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);

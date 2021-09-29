@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if(other.tag.Equals("Coin")) {
             this.coinCounter++;
-            Debug.Log("Collected a coin!");
         } else if(other.tag.Equals("cannonball")) {
             Cannonball cb = other.gameObject.GetComponent<Cannonball>();
             this.Damage(cb.damage);
@@ -34,7 +33,6 @@ public class Player : MonoBehaviour
         {
             var volume = other.relativeVelocity.magnitude/50;
             volume = Mathf.Clamp(volume, 0, 1);
-            Debug.Log(volume);
             Audiomanager.instance.Play("wallhit",volume);
         }
     }

@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class EndGameMenu : MonoBehaviour
 {
+    void Start()
+    { 
+        Audiomanager.instance.Play("victory",.5f);
+    }
 
     public void BackToMainMenu()
     {

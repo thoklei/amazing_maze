@@ -31,6 +31,7 @@ public class SphereColorSelection : MonoBehaviour
     
     public void LoadGame()
     {
+        Audiomanager.instance.Stop("mainmenu");
         SceneManager.LoadScene("GameScene");
     }
 }
