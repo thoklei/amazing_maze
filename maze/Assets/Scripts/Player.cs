@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private CheckpointManager checkpointManager;
     public int coinCounter;
+    public int killCounter = 0;
 
     public int health;
 
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
     private void Death() {
         this.transform.position = checkpointManager.GetRespawnTransform();
         this.health = 100;
+        this.killCounter++;
     }
 }
 
