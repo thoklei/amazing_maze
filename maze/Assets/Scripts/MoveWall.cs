@@ -22,14 +22,9 @@ public class MoveWall : MonoBehaviour
 
         if (this.transform.localPosition.y < -2f)
         {
-            this.GetComponent<MeshRenderer>().material = groundMat;
-            int numOfChildren = transform.childCount;
-            for (int i = 0; i < numOfChildren; i++)
-            {
-                GameObject child = transform.GetChild(i).gameObject;
-                child.GetComponent<Renderer>().material = groundMat;
-            }
-            this.enabled = false;
+            foreach (Transform child in transform)
+                child.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
