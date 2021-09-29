@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -310,7 +310,11 @@ PrefabInstance:
       propertyPath: ghost
       value: 
       objectReference: {fileID: 133732752}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6448921105993777470, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+    - {fileID: 1692881888489964453, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+    - {fileID: 9038178859593781462, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
+    - {fileID: 2156976278751183322, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
 --- !u!114 &71374495 stripped
 MonoBehaviour:
@@ -1041,7 +1045,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: aea4292ddb5ca4ad993b6279faf01c13, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7294573873839783714, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
+    - {fileID: 6042900528149641445, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85ffb2927bf9643bba2a8d19cbab335f, type: 3}
 --- !u!114 &778222041 stripped
 MonoBehaviour:
@@ -1724,7 +1730,9 @@ PrefabInstance:
       propertyPath: checkpointUI
       value: 
       objectReference: {fileID: 806100810}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2052727639437765088, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
+    - {fileID: 639976321932323188, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
 --- !u!4 &1498374283 stripped
 Transform:
@@ -3221,7 +3229,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: wall
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4328185093457736816, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
+    - {fileID: 2008964386411135899, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
 --- !u!4 &2032595417 stripped
 Transform:
