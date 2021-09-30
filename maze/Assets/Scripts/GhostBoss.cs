@@ -36,16 +36,18 @@ public class GhostBoss : MonoBehaviour
 
     public void StartHunting()
     {
-        foreach (Cannon cannon in _cannons)
+        foreach (Cannon cannon in _cannons) {
             cannon.StartShooting();
-            hunting = true;
+        }
+        hunting = true;
     }
 
     public void StopHunting()
     {
-        foreach (Cannon cannon in _cannons)
+        foreach (Cannon cannon in _cannons) {
             cannon.StopShooting();
-            hunting = false;
+        }
+        hunting = false;
     }
     
 
@@ -93,8 +95,9 @@ public class GhostBoss : MonoBehaviour
     private void Death() {
         Debug.Log("ded");
         StopHunting();
-        Destroy(this.gameObject);
         door1.Turnoff();
         door2.Turnoff();
+        Destroy(this.gameObject);
+
     }
 }
