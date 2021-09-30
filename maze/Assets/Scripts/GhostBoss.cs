@@ -18,14 +18,18 @@ public class GhostBoss : MonoBehaviour
 
     private int waypointIdx;
     private float dist;
-    public float playerdist;
+    public float playerdist = 8;
     public bool hunting;
+    public Material red;
+    private Material[] mats;
     
     private Component[] _cannons;
 
     // Start is called before the first frame update
     void Start()
     {
+        mats = this.GetComponent<Renderer>().materials;
+        mats[0] = red;
         hunting = false;
         // get all cannonscripts
         _cannons = this.GetComponents(typeof(Cannon));
@@ -35,10 +39,7 @@ public class GhostBoss : MonoBehaviour
     // activated by checkpoint manager
     public void StartHunting()
     {
-        foreach (Cannon cannon in _cannons) {
-            cannon.StartShooting();
-        }
-        hunting = true;
+        StartCoroutine(DelayActivation(3f));
     }
 
     public void StopHunting()
@@ -93,9 +94,21 @@ public class GhostBoss : MonoBehaviour
     private void Death() {
         Debug.Log("ded");
         StopHunting();
-        door1.Turnoff();
-        door2.Turnoff();
+        Audiomanager.instance.Play("boss_death");
+        door1.Turnoffinsec(2);
+        door2.Turnoffinsec(1.5f);
         Destroy(this.gameObject);
-
+    }
+    
+    private IEnumerator DelayActivation(float delay)
+    {
+        //Wait for x seconds, then turnoff
+        yield return new WaitForSeconds(delay);
+        this.GetComponent<Renderer>().materials = mats;
+        Audiomanager.instance.Play("boss_entry");
+        foreach (Cannon cannon in _cannons) {
+            cannon.StartShooting();
+        }
+        hunting = true;
     }
 }

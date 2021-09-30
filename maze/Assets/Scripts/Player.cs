@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
             Death();
         }
 
-        if (this.health >= 0)
+        if (damage <= this.health)
         {
             int i = UnityEngine.Random.Range(1, 4);
             Audiomanager.instance.Play("ouch"+i);
@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
 
     private void Death() {
         this.transform.position = checkpointManager.GetRespawnTransform();
+        Audiomanager.instance.Play("respawn");
         this.health = 100;
         this.deathCounter++;
     }

@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8f4b1d8f8c90487db2f87ca3eb1eea3, type: 2}
+  - {fileID: 2100000, guid: c69f234874a564532bc781f69ea743d0, type: 2}
   - {fileID: 4362962105363994262, guid: 497a30ce466704348bed8dc912fcf50f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -264,13 +264,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459daa3b0e12c4824bcddcbd40aefa2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
   speed: 5
   ball: {fileID: 0}
   _gameLogic: {fileID: 0}
   _ref: {fileID: 0}
-  playerdist: 20
+  door1: {fileID: 0}
+  door2: {fileID: 0}
+  playerdist: 8
   hunting: 0
+  red: {fileID: 2100000, guid: c8f4b1d8f8c90487db2f87ca3eb1eea3, type: 2}
 --- !u!114 &6690370190012149005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
   endpoint: {fileID: 1661155287853310854}
-  waitTime: 2
+  waitTime: 1
   speed: 0.01
   damage: 20
 --- !u!114 &2012734966700553376
@@ -302,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
   endpoint: {fileID: 8243564977798502219}
-  waitTime: 2
+  waitTime: 1
   speed: 0.01
   damage: 20
 --- !u!114 &8899580996492193767
@@ -319,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
   endpoint: {fileID: 536463979590707968}
-  waitTime: 2
+  waitTime: 1
   speed: 0.01
   damage: 20
 --- !u!114 &1133706219972181104
@@ -336,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
   endpoint: {fileID: 1620027743017224515}
-  waitTime: 2
+  waitTime: 1
   speed: 0.01
   damage: 20
 --- !u!1 &8243564977798502219
@@ -364,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8243564977798502219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 0}
+  m_LocalPosition: {x: -0.25, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 7187323992194133853}

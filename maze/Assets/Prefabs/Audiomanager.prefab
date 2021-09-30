@@ -180,4 +180,28 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 0
     source: {fileID: 0}
+  - name: boss_entry
+    clip: {fileID: 8300000, guid: 4323c50992a904e61a2bbd0aba10e818, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: respawn
+    clip: {fileID: 8300000, guid: c81b85e500f874b7497faeb7f8a305e2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: boss_death
+    clip: {fileID: 8300000, guid: 45c92fabd680e4c97a046ced3de9360e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
   isPlaying: 0

@@ -44,8 +44,6 @@ public class Laserdoor : MonoBehaviour
         //Wait for x seconds, then turnoff
         yield return new WaitForSeconds(delay);
         Turnoff();
-
-        
     }
     
 }
