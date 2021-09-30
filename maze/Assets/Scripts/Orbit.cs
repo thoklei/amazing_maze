@@ -14,6 +14,6 @@ public class Orbit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(ball.position, ball.up, 100*Time.deltaTime);
+        transform.RotateAround(ball.position, ball.up, 50*Time.deltaTime);
     }
 }
