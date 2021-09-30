@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8975794754792882386}
+  - component: {fileID: 479224748723327613}
   m_Layer: 0
   m_Name: Orbit (2)
   m_TagString: Untagged
@@ -30,6 +31,18 @@ Transform:
   m_Father: {fileID: 7187323992194133853}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479224748723327613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536463979590707968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a137c88b6bfd24517bc829fe0f086e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1620027743017224515
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8877398845260800143}
+  - component: {fileID: 6478045733797697169}
   m_Layer: 0
   m_Name: Orbit (3)
   m_TagString: Untagged
@@ -60,6 +74,18 @@ Transform:
   m_Father: {fileID: 7187323992194133853}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6478045733797697169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620027743017224515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a137c88b6bfd24517bc829fe0f086e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661155287853310854
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,6 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 110022176321848914}
+  - component: {fileID: 4667850709648218822}
   m_Layer: 0
   m_Name: Orbit
   m_TagString: Untagged
@@ -90,6 +117,18 @@ Transform:
   m_Father: {fileID: 7187323992194133853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4667850709648218822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661155287853310854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a137c88b6bfd24517bc829fe0f086e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7563041016512509415
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +196,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c69f234874a564532bc781f69ea743d0, type: 2}
+  - {fileID: 2100000, guid: c8f4b1d8f8c90487db2f87ca3eb1eea3, type: 2}
   - {fileID: 4362962105363994262, guid: 497a30ce466704348bed8dc912fcf50f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -223,11 +262,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  speed: 0
+  speed: 5
   ball: {fileID: 0}
   _gameLogic: {fileID: 0}
   _ref: {fileID: 0}
-  chasing: 0
+  playerdist: 20
+  hunting: 0
 --- !u!114 &6690370190012149005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7543901214527798210}
+  - component: {fileID: 5616880243885099993}
   m_Layer: 0
   m_Name: Orbit (1)
   m_TagString: Untagged
@@ -275,3 +316,15 @@ Transform:
   m_Father: {fileID: 7187323992194133853}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5616880243885099993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243564977798502219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a137c88b6bfd24517bc829fe0f086e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

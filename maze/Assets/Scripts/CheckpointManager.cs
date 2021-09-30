@@ -35,6 +35,7 @@ public class CheckpointManager : MonoBehaviour
         
         checkpoints[5].AddBehaviour(new MusicBehavior("song5"));
         checkpoints[5].AddBehaviour(new CoinCounterBehavior(0, coinCounter));
+        checkpoints[5].AddBehaviour(new GhostBossBehaviour());
         
         checkpoints[6].AddBehaviour(new MusicBehavior("victory"));
 

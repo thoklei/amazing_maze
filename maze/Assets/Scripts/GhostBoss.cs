@@ -13,95 +13,58 @@ public class GhostBoss : MonoBehaviour
 
     private int waypointIdx;
     private float dist;
-    private float playerdist;
+    public float playerdist;
+    public bool hunting;
     
-    public bool chasing;
     private Vector3 referenceVec;
     private Component[] _cannons;
 
     // Start is called before the first frame update
     void Start()
     {
+        hunting = false;
+        // get all cannonscripts
         _cannons = this.GetComponents(typeof(Cannon));
-        waypointIdx = 0;
-        chasing = false;
-        transform.LookAt(waypoints[waypointIdx].position);
+        
+        // TODO remove line when checkpoint fixed
+        foreach (Cannon cannon in _cannons)
+            cannon.StartShooting();
     }
 
-    public void StartChasing()
+    public void StartHunting()
     {
-        chasing = true;
+        foreach (Cannon cannon in _cannons)
+            cannon.StartShooting();
+            hunting = true;
     }
 
-    public void StopChasing()
+    public void StopHunting()
     {
-        chasing = false;
+        foreach (Cannon cannon in _cannons)
+            cannon.StopShooting();
+            hunting = false;
     }
+    
 
-
-    private void Update()
-    {
-    }
-
-    // Update is called once per frame
+    // 
     void FixedUpdate()
     {
-        dist = Vector3.Distance(transform.position, waypoints[waypointIdx].position);
-        if (!chasing)
+        if (hunting)
         {
-            if (dist < 0.1f)
-            {
-                IncreaseIdx();
-            }
-
-            Patrol();
+            Hunt();
         }
-        else Hunt();
-
     }
-
-    void Patrol()
-    {
-        //look at next waypoint
-        transform.LookAt(waypoints[waypointIdx].position, _ref.position);
-        // move towards waypoint
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        // disable cannons
-        foreach (Cannon cannon in _cannons)
-            cannon.enabled = false;
-    }
+    
 
     public void Hunt()
     {
-        Attack();
         // look at player
         transform.LookAt(ball.transform.position, _ref.position);
         // move towards player, but keep distance
         if(Vector3.Distance(this.transform.position ,ball.transform.position)>playerdist)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
-
-    public void Attack()
-    {
-        // arm cannons
-        foreach (Cannon cannon in _cannons)
-            cannon.enabled = true;
-    }
-
-
-    // get next waypoint
-    public void IncreaseIdx()
-    {
-        waypointIdx++;
-        if (waypointIdx >= waypoints.Length)
-        {
-            waypointIdx = 0;
-        }
-
-        // look at new waypoint
-        transform.LookAt(waypoints[waypointIdx].position);
-    }
-
+    
 
     // kill player
     private void OnTriggerEnter(Collider other)
