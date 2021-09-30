@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     public int health;
 
-    private bool readyToShoot = true; // whether the player is able to drop an explosive turd 
+    private bool readyToShoot = false; // whether the player is able to drop an explosive turd 
 
     // Start is called before the first frame update
     void Start()

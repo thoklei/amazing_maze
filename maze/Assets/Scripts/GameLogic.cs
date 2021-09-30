@@ -26,6 +26,7 @@ public class GameLogic : MonoBehaviour
             pauseMenu.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Time.timeScale = 0;
         }
         // reset to last checkpoint 
         if(Input.GetKeyDown(KeyCode.K)) {player.Damage(100);}
