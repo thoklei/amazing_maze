@@ -43,6 +43,7 @@ It was developed as part of the `Advanced Experiment Design in Unity` course in 
 * PauseMenu
   * KeyBindings
 
+Special thanks to Oli Franz, the composer of our awesome soundtrack! Check out his [Soundcloud](https://soundcloud.com/thisis5ong6)
+
 ## Keybindings
 ![Keybindings for the game](maze/Assets/Resources/maze_keybindings.png)
-
