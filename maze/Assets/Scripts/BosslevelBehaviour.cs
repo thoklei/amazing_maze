@@ -9,6 +9,7 @@ public class BosslevelBehaviour : CheckpointBehaviour
     public override void OnActivate()
     {
         Debug.Log("activating boss level");
+        player.Arm();
     }
 
     public override void OnDeactivate()
