@@ -26,9 +26,12 @@ public class Cannon : MonoBehaviour
 
     public void StopShooting() {
         StopCoroutine(this.shooting);
+        Debug.Log("Stoppoing");
         foreach(Cannonball cb in this.projectiles) {
+            Debug.Log("Cannonball: " + cb);
             if(cb != null) {
-                Destroy(cb);
+                Debug.Log("not null, deleting");
+                Destroy(cb.gameObject);
             }
         }
         this.projectiles.Clear();
