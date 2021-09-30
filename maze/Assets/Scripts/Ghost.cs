@@ -14,7 +14,6 @@ public class Ghost : MonoBehaviour
     private int waypointIdx;
     private float dist;
     public bool chasing;
-    private Vector3 referenceVec;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +23,7 @@ public class Ghost : MonoBehaviour
         transform.LookAt(waypoints[waypointIdx].position);
     }
 
+    // activated by checkpoint manager
     public void StartChasing() {
         chasing = true;
     }
@@ -32,13 +32,9 @@ public class Ghost : MonoBehaviour
         chasing = false;
     }
     
-
-    private void Update() {
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
+        // patrol along waypoints, if close enough select next waypoint
         dist = Vector3.Distance(transform.position, waypoints[waypointIdx].position);
         if (!chasing)
         {
@@ -53,14 +49,15 @@ public class Ghost : MonoBehaviour
 
     }
 
+    // look at waypoint, move forwards. always point head at ref object (up)
     void Patrol()
     {
-        
         transform.LookAt(waypoints[waypointIdx].position, _ref.position);
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
     
+    // look at player, move forward
     public void Chase()
     {
         transform.LookAt(ball.transform.position, _ref.position);

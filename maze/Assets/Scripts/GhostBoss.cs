@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GhostBoss : MonoBehaviour
 {
-    public Transform[] waypoints;
     public int speed;
     [SerializeField] private Player ball;
     [SerializeField] private GameLogic _gameLogic;
@@ -16,7 +15,6 @@ public class GhostBoss : MonoBehaviour
     public float playerdist;
     public bool hunting;
     
-    private Vector3 referenceVec;
     private Component[] _cannons;
 
     // Start is called before the first frame update
@@ -28,22 +26,22 @@ public class GhostBoss : MonoBehaviour
         
     }
 
+    // activated by checkpoint manager
     public void StartHunting()
     {
         foreach (Cannon cannon in _cannons)
             cannon.StartShooting();
-            hunting = true;
+        hunting = true;
     }
 
     public void StopHunting()
     {
         foreach (Cannon cannon in _cannons)
             cannon.StopShooting();
-            hunting = false;
+        hunting = false;
     }
     
-
-    // 
+    
     void FixedUpdate()
     {
         if (hunting)
@@ -55,7 +53,7 @@ public class GhostBoss : MonoBehaviour
 
     public void Hunt()
     {
-        // look at player
+        // look at player, head always points towards ref object (up)
         transform.LookAt(ball.transform.position, _ref.position);
         // move towards player, but keep distance
         if(Vector3.Distance(this.transform.position ,ball.transform.position)>playerdist)
@@ -63,7 +61,7 @@ public class GhostBoss : MonoBehaviour
     }
     
 
-    // kill player
+    // kill player on collision
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
