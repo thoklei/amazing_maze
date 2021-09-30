@@ -13,7 +13,7 @@ public class Cannonball : MonoBehaviour
 
     float relativeDistance = 0.0f;
 
-    public int damage = 10;
+    public int damage = 25;
 
     // Start is called before the first frame update
     void Start()

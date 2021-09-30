@@ -9,9 +9,15 @@ public class Cannon : MonoBehaviour
 
     [SerializeField] float waitTime = 5.0f; // seconds in between shots
     [SerializeField] float speed = 0.01f;
-    [SerializeField] int damage = 10;
+    [SerializeField] int damage = 25;
 
     private Coroutine shooting;
+
+    private List<Cannonball> projectiles; // list of currently active cannonballs
+
+    void Start() {
+        projectiles = new List<Cannonball>();
+    }
 
     public void StartShooting() {
         Debug.Log("Cannon started shooting");
@@ -20,6 +26,12 @@ public class Cannon : MonoBehaviour
 
     public void StopShooting() {
         StopCoroutine(this.shooting);
+        foreach(Cannonball cb in this.projectiles) {
+            if(cb != null) {
+                Destroy(cb);
+            }
+        }
+        this.projectiles.Clear();
     }
 
     protected IEnumerator FirePeriodically()
@@ -31,9 +43,11 @@ public class Cannon : MonoBehaviour
     }
 
     void SpawnBall() {
+        Audiomanager.instance.Play("cannon_shot");
         Cannonball cb = Instantiate<Cannonball>(cannonball, this.transform.position, Quaternion.identity);
         cb.transform.SetParent(this.transform.parent.parent);
         cb.SetProperties(speed, damage);
         cb.SetPoints(this.gameObject, this.endpoint);
+        this.projectiles.Add(cb);
     }
 }

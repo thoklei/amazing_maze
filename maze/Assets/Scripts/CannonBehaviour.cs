@@ -5,16 +5,16 @@ using UnityEngine;
 // The behaviour that (de)activates all cannons
 public class CannonBehaviour : CheckpointBehaviour
 {
+
+    [SerializeField] private GameObject wall; // the wall to which this CannonBehaviour is attached
     private List<Cannon> cannons;
     
-    public override void Init() {
-        Debug.Log("Running Init");
+    void Start() {
         cannons = new List<Cannon>();
-        cannons.AddRange(this.checkPoint.gameObject.transform.parent.GetComponentsInChildren<Cannon>());
+        cannons.AddRange(wall.GetComponentsInChildren<Cannon>());
     }
     public override void OnActivate()
     {
-        Debug.Log("In onActivate");
         foreach(Cannon cannon in cannons){
             cannon.StartShooting();
         }

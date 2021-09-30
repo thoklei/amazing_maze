@@ -148,4 +148,36 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 1
     source: {fileID: 0}
+  - name: cannon_shot
+    clip: {fileID: 8300000, guid: bcd53455de7ef408082eccdd319b8c81, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ouch1
+    clip: {fileID: 8300000, guid: 2f70f7bb3f81743baa1e0ae5bca1d412, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ouch2
+    clip: {fileID: 8300000, guid: 7dd4668cd6e1348019d2ad6dc12ce725, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ouch3
+    clip: {fileID: 8300000, guid: c0d518e71b47141349cb210d3c9c2869, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
   isPlaying: 0
