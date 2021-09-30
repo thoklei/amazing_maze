@@ -1339,6 +1339,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: deathCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 2529583977655982129, guid: b5a910e706b7b344b82784a588e763e5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529583977655982129, guid: b5a910e706b7b344b82784a588e763e5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529583977655982129, guid: b5a910e706b7b344b82784a588e763e5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a910e706b7b344b82784a588e763e5, type: 3}
 --- !u!4 &5033233189117730135 stripped
