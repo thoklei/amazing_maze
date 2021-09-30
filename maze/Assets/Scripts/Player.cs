@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public int health;
 
     private bool readyToShoot = false; // whether the player is able to drop an explosive turd 
+    private float coolDownTime = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,14 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)) {
             Weapon weap = Instantiate<Weapon>(this.weapon, this.transform.position, Quaternion.identity);
             weap.transform.parent = walls.transform;
+            this.readyToShoot = false;
+            StartCoroutine(Cooldown());
         }
+    }
+
+    private IEnumerator Cooldown() {
+        yield return new WaitForSeconds(coolDownTime);
+        this.Arm();
     }
 
     void OnTriggerEnter(Collider other) {
