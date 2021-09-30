@@ -8,12 +8,16 @@ public class GhostBossBehaviour : CheckpointBehaviour
 
     //TODO make serializable field when checkopointfixed
     [SerializeField] private GhostBoss boss;
+
+    [SerializeField] private Player player;
     
 
     public override void OnActivate()
     {
         Debug.Log("Activating GhostBoss");
         boss.StartHunting();
+        player.Arm();
+
     }
 
     public override void OnDeactivate()
