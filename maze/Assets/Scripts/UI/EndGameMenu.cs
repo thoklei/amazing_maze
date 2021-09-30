@@ -10,6 +10,8 @@ public class EndGameMenu : MonoBehaviour
     void Start()
     { 
         Audiomanager.instance.Play("victory",.5f);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void BackToMainMenu()

@@ -19,6 +19,6 @@ public class GhostBossBehaviour : CheckpointBehaviour
     public override void OnDeactivate()
     {
         Debug.Log("Deactivating GhostBoss");
-        boss.StopHunting();
+        //boss.StopHunting();
     }
 }
