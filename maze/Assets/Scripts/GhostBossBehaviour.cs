@@ -7,12 +7,9 @@ public class GhostBossBehaviour : CheckpointBehaviour
 {
 
     //TODO make serializable field when checkopointfixed
-    private GhostBoss boss;
+    [SerializeField] private GhostBoss boss;
     
-    public override void Init() {
-        Debug.Log("Running Init");
-        boss = this.checkPoint.gameObject.transform.parent.GetComponentInChildren<GhostBoss>();
-    }
+
     public override void OnActivate()
     {
         Debug.Log("Activating GhostBoss");

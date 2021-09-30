@@ -26,9 +26,6 @@ public class GhostBoss : MonoBehaviour
         // get all cannonscripts
         _cannons = this.GetComponents(typeof(Cannon));
         
-        // TODO remove line when checkpoint fixed
-        foreach (Cannon cannon in _cannons)
-            cannon.StartShooting();
     }
 
     public void StartHunting()

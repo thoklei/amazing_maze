@@ -144,6 +144,9 @@ GameObject:
   - component: {fileID: 7463554453573157267}
   - component: {fileID: 2932754777136405187}
   - component: {fileID: 6690370190012149005}
+  - component: {fileID: 2012734966700553376}
+  - component: {fileID: 8899580996492193767}
+  - component: {fileID: 1133706219972181104}
   m_Layer: 0
   m_Name: Ghostboss
   m_TagString: Untagged
@@ -280,11 +283,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonball: {fileID: 0}
-  endpoint: {fileID: 0}
-  waitTime: 5
+  cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
+  endpoint: {fileID: 1661155287853310854}
+  waitTime: 2
   speed: 0.01
-  damage: 10
+  damage: 20
+--- !u!114 &2012734966700553376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563041016512509415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
+  endpoint: {fileID: 8243564977798502219}
+  waitTime: 2
+  speed: 0.01
+  damage: 20
+--- !u!114 &8899580996492193767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563041016512509415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
+  endpoint: {fileID: 536463979590707968}
+  waitTime: 2
+  speed: 0.01
+  damage: 20
+--- !u!114 &1133706219972181104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563041016512509415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonball: {fileID: 6523866011561529551, guid: fb907da08026149e393f6498ca998a88, type: 3}
+  endpoint: {fileID: 1620027743017224515}
+  waitTime: 2
+  speed: 0.01
+  damage: 20
 --- !u!1 &8243564977798502219
 GameObject:
   m_ObjectHideFlags: 0
