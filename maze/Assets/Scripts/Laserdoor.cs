@@ -8,7 +8,7 @@ using UnityEngine;
 public class Laserdoor : MonoBehaviour
 {
     [SerializeField] Player ball;
-    [SerializeField] int coingoal;
+    [SerializeField] public int coingoal;
     
     void Update()
     {
