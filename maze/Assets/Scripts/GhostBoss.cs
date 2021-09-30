@@ -6,9 +6,15 @@ using UnityEngine;
 public class GhostBoss : MonoBehaviour
 {
     public int speed;
+
+    private int health = 100;
+
     [SerializeField] private Player ball;
     [SerializeField] private GameLogic _gameLogic;
     [SerializeField] private Transform _ref;
+
+    [SerializeField] private Laserdoor door1;
+    [SerializeField] private Laserdoor door2;
 
     private int waypointIdx;
     private float dist;
@@ -29,15 +35,17 @@ public class GhostBoss : MonoBehaviour
     // activated by checkpoint manager
     public void StartHunting()
     {
-        foreach (Cannon cannon in _cannons)
+        foreach (Cannon cannon in _cannons) {
             cannon.StartShooting();
+        }
         hunting = true;
     }
 
     public void StopHunting()
     {
-        foreach (Cannon cannon in _cannons)
+        foreach (Cannon cannon in _cannons) {
             cannon.StopShooting();
+        }
         hunting = false;
     }
     
@@ -68,5 +76,26 @@ public class GhostBoss : MonoBehaviour
         {
             ball.Damage(150);
         }
+
+        if(other.tag.Equals("explosion")) {
+            this.Damage(20);
+        }
+    }
+
+    private void Damage(int dmg) {
+        this.health -= dmg;
+        Debug.Log("Got hit: " + health);
+        if(this.health <= 0) {
+            this.Death();
+        }
+    }
+
+    private void Death() {
+        Debug.Log("ded");
+        StopHunting();
+        door1.Turnoff();
+        door2.Turnoff();
+        Destroy(this.gameObject);
+
     }
 }
