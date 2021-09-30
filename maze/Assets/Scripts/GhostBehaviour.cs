@@ -6,12 +6,13 @@ using UnityEngine;
 public class GhostBehaviour : CheckpointBehaviour
 {
 
-    private Ghost ghost;
+    [SerializeField] private Ghost ghost;
     
-    public override void Init() {
-        Debug.Log("Running Init");
-        ghost = this.checkPoint.gameObject.transform.parent.GetComponentInChildren<Ghost>();
-    }
+    // public override void Init() {
+    //     Debug.Log("Running Init");
+    //     ghost = this.checkPoint.gameObject.transform.parent.GetComponentInChildren<Ghost>();
+    // }
+    
     public override void OnActivate()
     {
         Debug.Log("Activating Ghost");
