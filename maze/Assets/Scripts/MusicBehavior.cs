@@ -5,18 +5,19 @@ using UnityEngine;
 
 public class MusicBehavior : CheckpointBehaviour
 {
-    private string song;
-    public MusicBehavior(string songname)
-    {
-        song = songname;
-    }
+    [SerializeField] public string song;
+
+    // public MusicBehavior(string songname)
+    // {
+    //     song = songname;
+    // }
 
     
     
-    public override void Init() {
-        Debug.Log("Running Init");
+    // public override void Init() {
+    //     Debug.Log("Running Init");
 
-    }
+    // }
 
 
     public override void OnActivate()
