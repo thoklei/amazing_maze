@@ -635,7 +635,7 @@ MonoBehaviour:
   endpoint: {fileID: 1597780970}
   waitTime: 2
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!1 &235959736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   endpoint: {fileID: 1288805655}
   waitTime: 5
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   endpoint: {fileID: 235959736}
   waitTime: 3
   speed: 0.003
-  damage: 10
+  damage: 25
 --- !u!1 &1109604698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3940767667192136637, guid: 6c11451facc1f3b4582677a4bb33248e, type: 3}
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   endpoint: {fileID: 2019475159}
   waitTime: 3
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!1 &1288805655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   endpoint: {fileID: 1999013366}
   waitTime: 6
   speed: 0.03
-  damage: 10
+  damage: 25
 --- !u!4 &1478222366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6627950676273716897, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
@@ -2308,33 +2308,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 741435381961296986, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_PrefabInstance: {fileID: 1498374282}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1564883564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3210848119172019423, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
-  m_PrefabInstance: {fileID: 1498374282}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1564883565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 372575527773269086, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
   m_PrefabInstance: {fileID: 1498374282}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1564883569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564883564}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8bf976b4c2645cb868f65ca9767b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cannonball: {fileID: 0}
-  endpoint: {fileID: 0}
-  waitTime: 5
-  speed: 0.01
-  damage: 10
 --- !u!1 &1568775023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3878376343279243829, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
@@ -2488,7 +2466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5033233189117730135, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5033233190400884613, guid: a39f55eeaeaabfe439a97b5fca20f6c3, type: 3}
       propertyPath: player
@@ -2561,7 +2539,7 @@ MonoBehaviour:
   endpoint: {fileID: 87948592}
   waitTime: 1
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!1 &1597780970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2618,7 @@ MonoBehaviour:
   endpoint: {fileID: 2002820892}
   waitTime: 5
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!4 &1604118203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1727316159573849198, guid: 9a2a3775762c841d5b4d6f0704b19032, type: 3}
@@ -2705,7 +2683,7 @@ MonoBehaviour:
   endpoint: {fileID: 1127882898}
   waitTime: 4
   speed: 0.008
-  damage: 10
+  damage: 25
 --- !u!1 &1700044422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2867,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: victory
+--- !u!114 &1902598930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902598928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a038072c4f0742c8820aee048ad1f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1949520716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 975449711449030410, guid: 4c2db23ad9d784ed9a35e3dee1520f3a, type: 3}
@@ -3975,7 +3965,7 @@ MonoBehaviour:
   endpoint: {fileID: 1700044422}
   waitTime: 2
   speed: 0.006
-  damage: 10
+  damage: 25
 --- !u!1 &2062999047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,7 +4014,7 @@ MonoBehaviour:
   endpoint: {fileID: 550397934}
   waitTime: 2
   speed: 0.01
-  damage: 10
+  damage: 25
 --- !u!1 &2077477183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 81314611275504113, guid: 85e0ea1a2f34143bdbcd50b14a32ae41, type: 3}
