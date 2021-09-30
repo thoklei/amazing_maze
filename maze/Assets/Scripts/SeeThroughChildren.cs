@@ -49,12 +49,16 @@ public class SeeThroughChildren : MonoBehaviour
     }
 
     void SetInvisible(Renderer rend) {
-        rend.enabled = false;
-        ready = false;
+        if(rend != null) {
+            rend.enabled = false;
+            ready = false;
+        }
     }
 
     void SetVisible(Renderer rend) {
-        rend.enabled = true;
+        if(rend != null) {
+            rend.enabled = true;
+        }
     }
 
     protected IEnumerator FadeBackIn()
