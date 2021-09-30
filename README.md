@@ -31,3 +31,7 @@ It was developed as part of the `Advanced Experiment Design in Unity` course in 
   * allows to start a new game 
 * PauseMenu
   * KeyBindings
+
+## Keybindings
+![Keybindings for the game](maze/Assets/Resources/maze_keybindings.png)
+
