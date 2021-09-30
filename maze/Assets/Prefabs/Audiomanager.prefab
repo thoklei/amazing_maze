@@ -148,8 +148,24 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 1
     source: {fileID: 0}
-  - name: cannon_shot
+  - name: cannon1
     clip: {fileID: 8300000, guid: bcd53455de7ef408082eccdd319b8c81, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: cannon2
+    clip: {fileID: 8300000, guid: 8ec6966c1ddf740f99af53ec94bb4a72, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: cannon3
+    clip: {fileID: 8300000, guid: 42acc96f9d00f413bb4a91a040390789, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0

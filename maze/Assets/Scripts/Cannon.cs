@@ -46,7 +46,8 @@ public class Cannon : MonoBehaviour
     }
 
     void SpawnBall() {
-        Audiomanager.instance.Play("cannon_shot");
+        int i = UnityEngine.Random.Range(1, 4);
+        Audiomanager.instance.Play("cannon"+i);
         Cannonball cb = Instantiate<Cannonball>(cannonball, this.transform.position, Quaternion.identity);
         cb.transform.SetParent(this.transform.parent.parent);
         cb.SetProperties(speed, damage);
