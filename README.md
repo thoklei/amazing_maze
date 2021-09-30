@@ -6,14 +6,25 @@ AmazingMaze is a 3D labyrinth game inside of a Cube inspired by the old wood bas
 It was developed as part of the `Advanced Experiment Design in Unity` course in the SS2021 by Tilman Kalthoff, Thomas Klein, Léon Dankert and Chris Bröcker.
 
 ## Features
-* 6 Levels
+* 6 Levels designed in Blender with levelmechanics:
+  * use funnel to de/increase size to access other levelparts
+  * collect coins to disable laserwalls
+  * activate buttons to disable laserwalls
+  * avoid enemies
 * Audio:
   * Ball:
     * Rolling
     * Bumping into walls
+    * Damage
+    * Respawn
+  * Objects:
+    * Button
+    * Coin
   * Enemy:
     * Ghost
+    * Boss
     * Laserwalls
+    * Cannon
   * Ambience
     * MainMenu
     * Each of the 6 levels has different music
