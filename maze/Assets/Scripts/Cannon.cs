@@ -9,7 +9,7 @@ public class Cannon : MonoBehaviour
 
     [SerializeField] float waitTime = 5.0f; // seconds in between shots
     [SerializeField] float speed = 0.01f;
-    [SerializeField] int damage = 10;
+    [SerializeField] int damage = 25;
 
     private Coroutine shooting;
 
